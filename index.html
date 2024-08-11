@@ -124,6 +124,87 @@ body * {
     width: 50%;
     text-shadow: 0px 2px 1px #94B5FF, -1px 1px 2px #94b5ff80, 1px -1px 2px var(--c4), 2px -2px 2px var(--c4), 3px -3px 2px var(--c4), 4px -4px 2px var(--c4), 5px -5px 2px var(--c4), 6px -6px 2px var(--c4), 7px -7px 2px var(--c4), 8px -8px 2px var(--c4), 6px -6px 7px var(--c6), 6px -6px 7px var(--c6);
 }
+
+.center-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.hole {
+    width: 28vmin;
+    height: 20vmin;
+    background: 
+        radial-gradient(circle at 50% 0%, var(--c2), #fff0 45%), 
+        radial-gradient(circle at 30% 100%, #061b43, #fff0 77%), 
+        radial-gradient(circle at 20% 100%, var(--c3), var(--c2), var(--c2));
+    border-radius: 100%;
+    box-shadow: 0 -2px 4px -2px #fffc, 0 2px 3px -3px #fffc inset, 0 2px 6px -4px #000;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30vmin;
+}
+
+
+.ladder,
+.ladder-shadow {
+    --shadow: #0008;
+    background: 
+        linear-gradient(180deg, #fff0 33%, var(--shadow), #000), 
+        linear-gradient(90deg, #cec3b9 0 1.2vmin, #b3aba2 0 1.5vmin, #fff0 0 100%), 
+        linear-gradient(90deg, #cec3b9 0 1.2vmin, #b3aba2 0 1.75vmin, #fff0 0 calc(100% - 1.75vmin)), 
+        repeating-linear-gradient(0deg, #cec3b9 0 1.2vmin, #e7dbcf 0 1.75vmin, #fff0 0 6.75vmin), 
+        linear-gradient(90deg, #cec3b9 0 1.2vmin, #b3aba2 0 1.75vmin, #fff0 0 calc(100% - 1.75vmin));
+    width: 10vmin;
+    height: 30vmin;
+    margin-left: 14vmin;
+    position: absolute;
+    top: 0vmin;
+    transform: rotate3d(4, 1, 1, 45deg) skew(0deg, 20deg);
+    background-position: 0 0, 0 0, 8.25vmin 0, 0 -3.25vmin, 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ladder-shadow {
+    filter: invert(1) blur(1px) opacity(0.4) contrast(5);
+    transform: rotate3d(2, 1, 1, 45deg) rotate(-10deg) translate(1.15vmin, 1.9vmin) skew(0deg, 20deg);
+    --shadow: #0000;
+}
+
+.ladder:before, 
+.ladder:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(210deg, #fff0 0.4vmin, #e7dbcf calc(0.35vmin + 1px) 1.45vmin, #b3aba2 calc(1.4vmin + 1px) 100%);
+    width: 0.85vmin;
+    height: 1.75vmin;
+    transform-origin: 0 1%;
+    transform: rotate(-90deg);
+    top: 1px;
+}
+
+.ladder:after {
+    left: 8.25vmin;
+}
+
+
+.four {
+    font-size: 45vmin;
+    font-weight: bold;
+    font-family: Arial, Helvetica, serif;
+    position: absolute;
+    margin-left: -58vmin;
+    margin-top: 27vmin;
+    transform: rotate(22deg) scale(0.8, 0.85) rotateX(40deg) rotateY(-10deg) rotateZ(-5deg);
+    text-shadow: 0px 2px 1px #94b5ff, -1px 1px 2px #94b5ff80, 1px 2px 2px var(--c3), 2px 4px 2px var(--c3), 4px 6px 2px var(--c3), 5px 8px 2px var(--c3), 6px 10px 2px var(--c3), 7px 12px 2px var(--c3), 8px 14px 2px var(--c3), 9px 16px 2px var(--c3), 10px 18px 2px var(--c3), 11px 20px 3px var(--c3), 12px 22px 3px var(--c3), 13px 22px 10px var(--c6), 18px 14px 15px var(--c6);
+    color: var(--c1);
+    filter: drop-shadow(10px -4px 10px var(--c4));
+}
+
     </style>
 </head>
 
